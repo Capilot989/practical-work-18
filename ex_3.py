@@ -17,7 +17,7 @@ def count_numbs(*, a: int, b: int, c: int, d: int):
         """
     numb_list = range(a, b + 1)
     count = sum(
-        list(map(lambda x: (x % c != 0 and x % 10 != d), numb_list))
+        list(map(lambda x: (x % c != 0 and x % 10 == d), numb_list))
     )
     return count
 
@@ -26,5 +26,5 @@ if __name__ == "__main__":
     a = int(input("Enter the start number: "))
     b = int(input("Enter the end number: "))
     c = int(input("Enter the false divider: "))
-    d = int(input("Enter the digit which is not the last: "))
+    d = int(input("Enter the digit which is last: "))
     print(count_numbs(a=a, b=b, c=c, d=d))

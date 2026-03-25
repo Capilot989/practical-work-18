@@ -14,7 +14,7 @@ def count_multiplies(*, a: int, b: int, c: int, d: int):
        Returns:
            The sum of numbers in [a, b] that are divisible by both c and d
        """
-    numb_list = [number for number in range(a, b+1)]
+    numb_list = range(a, b + 1)
     count = sum(
         list(filter(lambda x: (x % c == 0 and x % d == 0), numb_list))
     )
